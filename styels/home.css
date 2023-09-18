@@ -1,0 +1,132 @@
+@import url('./variables.css');
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+.brand-logo{
+    display: block;
+}
+
+.brand-logo-mobile{
+    display: none;
+}
+
+.brand-logo-text{
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: var(--main-color);
+}
+
+.links{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.link{
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: var(--main-color);
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+.active-link{
+    border: 1px solid var(--main-color);
+    border-radius: var(--border-radius);
+    padding: 5px 15px;
+}
+
+.banner{
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url('../app/assets/banner/main-banner.jpg'); */
+    background-color: var(--white);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+}
+
+.banner-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-image{
+    width: 400px;
+    height: 400px;
+}
+
+.under-process-text{
+    font-size: 30px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--main-color);
+    line-height: 32px;
+}
+
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    display: none;
+}
+
+.hamburger div{
+    cursor: pointer;
+    background-color: var(--main-color);
+    height: 4px;
+    width: 30px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .hamburger{
+        display: flex;
+    }
+    
+    .links{
+        display: none;
+    }
+
+    .brand-logo{
+        display: none;
+    }
+    
+    .brand-logo-mobile{
+        display: block;
+    }
+
+    .banner-content{
+        width: 100%;
+        padding: 0px 0px;
+        margin: 0 auto;
+    }
+
+    .content-image{
+        width: 80%;
+        height: 400px;
+    }
+}
