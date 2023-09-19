@@ -18,17 +18,19 @@ header{
 
 .brand-logo{
     display: block;
+    cursor: pointer;
 }
 
 .brand-logo-mobile{
     display: none;
+    cursor: pointer;
 }
 
 .brand-logo-text{
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 0.3px;
-    color: var(--main-color);
+    color: var(--white);
 }
 
 .links{
@@ -38,17 +40,64 @@ header{
     justify-content: flex-end;
 }
 
+.side-nav-links{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 70px;
+}
+
+.side-nav{
+    width: 80%;
+    height: 100vh;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: all ease-in 0.3s;
+}
+
 .link{
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 0.3px;
-    color: var(--main-color);
+    color: var(--white);
     cursor: pointer;
     margin-right: 30px;
+    transition: all ease-in 0.2s;
+}
+
+.link:hover{
+   color: goldenrod;
+   border-color: goldenrod; 
+}
+
+.side-nav-link{
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: var(--white);
+    cursor: pointer;
+    margin-bottom: 60px;
+    transition: all ease-in 0.2s;
+}
+
+.side-nav-link:hover{
+    color: goldenrod;  
+    border-color: goldenrod; 
 }
 
 .active-link{
-    border: 1px solid var(--main-color);
+    border: 1px solid var(--white);
+    border-radius: var(--border-radius);
+    padding: 5px 15px;
+}
+
+.side-nav-active-link{
+    border: 1px solid var(--white);
     border-radius: var(--border-radius);
     padding: 5px 15px;
 }
@@ -56,7 +105,7 @@ header{
 .banner{
     width: 100vw;
     height: 100vh;
-    /* background-image: url('../app/assets/banner/main-banner.jpg'); */
+    background-image: url('../app/assets/banner/main-banner.jpg');
     background-color: var(--white);
     background-position: center;
     background-size: cover;
@@ -70,6 +119,20 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 30px;
+}
+
+.banner-image{
+    width: 100%;
+    height: 500px;
+    padding: 30px;
+}
+
+.banner-image img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    overflow: hidden;
 }
 
 .content-image{
@@ -82,7 +145,7 @@ header{
     letter-spacing: 0.3px;
     text-align: center;
     font-weight: 600;
-    color: var(--main-color);
+    color: var(--white);
     line-height: 32px;
 }
 
@@ -92,14 +155,36 @@ header{
     align-items: center;
     justify-content: flex-start;
     display: none;
+    cursor: pointer;
+}
+
+.side-nav-hamburger{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    height: 30px;
+    width: 40px;
 }
 
 .hamburger div{
-    cursor: pointer;
-    background-color: var(--main-color);
+    background-color: var(--white);
     height: 4px;
     width: 30px;
     margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.side-nav-hamburger div{
+    background-color: var(--white);
+    height: 1px;
+    width: 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
